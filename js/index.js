@@ -66,6 +66,6 @@ function onOpenModal(event) {
 
 function onCloseModal() {
     modalRef.classList.remove('is-open');
-    closeModalButton.removeEventListener()
+    closeModalButton.removeEventListener('click', onCloseModal);
     imageModalRef.src = '';
 }
