@@ -59,11 +59,13 @@ function onOpenModal(event) {
     imageModalRef.src = event.target.dataset.source;
     imageModalRef.alt = event.target.alt;
     closeModalButton.addEventListener('click', onCloseModal);
+
     overlayRef.addEventListener('click', onCloseModal);
     window.addEventListener('keydown', onCloseModal);
 }
 
 function onCloseModal() {
     modalRef.classList.remove('is-open');
+    closeModalButton.removeEventListener()
     imageModalRef.src = '';
 }
